@@ -7,6 +7,7 @@ import {
   ScrollView,
   ActivityIndicator,
   RefreshControl,
+  Share,
 } from "react-native";
 
 import {
@@ -38,7 +39,16 @@ const JobDetails = () => {
     refetch()
     setRefreshing(false)
   }, []);
-
+  const shareData = async (link) => {
+    try {
+      await Share.share({
+        message:
+          link,
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   const displayTabContent = () => {
     switch (activeTab) {
@@ -83,7 +93,7 @@ const JobDetails = () => {
             />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' />
+            <ScreenHeaderBtn iconUrl={icons.share} handlePress={() => shareData(data[0]?.job_google_link)} dimension='60%' />
           ),
           headerTitle: "",
         }}

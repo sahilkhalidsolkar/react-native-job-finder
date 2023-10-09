@@ -13,7 +13,7 @@ const useFetch = (endpoint, query) => {
       "X-RapidAPI-Key": 'c4b84efa04mshdcf57e319b33bd5p122c2fjsn9fb91f4ed22a',
       "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
     },
-    params: { ...query },
+    params: { ...query, location: "India, IN, New-York, NY, USA" },
   };
 
   const fetchData = async () => {

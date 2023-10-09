@@ -16,7 +16,7 @@ import useFetch from "../../../hook/useFetch";
 const Popularjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
-    query: "React developer",
+    query: "popular jobs",
     num_pages: "1",
   });
 
@@ -26,12 +26,14 @@ const Popularjobs = () => {
     router.push(`/job-details/${item.job_id}`);
     setSelectedJob(item.job_id);
   };
-
+  const showAll=(searchTerm)=>{
+        router.push(`/search/${searchTerm||'Software developer'}`) 
+  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular jobs</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>showAll("popular jobs")}>
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
       </View>
