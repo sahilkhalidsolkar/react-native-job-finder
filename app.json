@@ -4,15 +4,16 @@
     "web": {
       "bundler": "metro"
     },
-    "name": "jobsift",
-    "slug": "jobsift",
+    "name": "job finder",
+    "slug": "job-finder",
     "extra": {
       "eas": {
-        "projectId": "42f3f1cf-d1ff-4303-932d-05789bcffd12"
+        "projectId": "d84a94a0-c5f1-4250-bcb7-7dbb1f8249c6"
       }
     },
     "android": {
-      "package": "com.sahilksolkar.jobsift"
-    }
+      "package": "com.sahilksolkar.jobfinder"
+    },
+    "owner": "sahilksolkar"
   }
 }
