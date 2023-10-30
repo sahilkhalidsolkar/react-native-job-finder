@@ -23,7 +23,7 @@ const OtherJobs = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Other jobs</Text>
-        <TouchableOpacity onPress={()=>showAll()}>
+        <TouchableOpacity onPress={()=>showAll("other jobs")}>
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
       </View>

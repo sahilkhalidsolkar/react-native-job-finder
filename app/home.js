@@ -9,7 +9,6 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
-// import NearByjobs from "../components/home/nearby/NearByJobs";
 
 const Home = () => {
   const router = useRouter()
@@ -21,14 +20,6 @@ const Home = () => {
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          // headerLeft: () => (
-          //   // <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
-          //   <></>
-          // ),
-          // headerRight: () => (
-          //   // <ScreenHeaderBtn iconUrl={images.profile} dimension='100%' />
-          //   <></>
-          // ),
           headerTitle: "Job Finder",
 
         }}
